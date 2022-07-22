@@ -39,6 +39,7 @@ describe("useControls", () => {
 
     mockedSelector.mockReturnValue(testState);
     // mockedSelector.mockReturnValue("all");
+    // mockedSelector.mockReturnValue("all");
     // const mockedClearComplete = jest.spyOn(actions, "clearComplete");
 
     const { result } = renderHook(useControls);
