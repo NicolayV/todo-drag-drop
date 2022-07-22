@@ -1,0 +1,32 @@
+[
+  {
+    "id": "g7HFkxC94eH8F_wviYijh",
+    "value": "Complete online JavaScript course",
+    "complete": true
+  },
+  {
+    "id": "vWubZtpGHszJiNG9Wion9",
+    "value": "Jog around the park 3x",
+    "complete": false
+  },
+  {
+    "id": "8PSNzkOPru8FrhjEZERr7",
+    "value": "10 minutes meditation",
+    "complete": false
+  },
+  {
+    "id": "eUa_CnuIZwkERGdOFtUH_",
+    "value": "Read for 1 hour",
+    "complete": false
+  },
+  {
+    "id": "sJwkIiOrc0_f1ftfDOzxn",
+    "value": "Pick up groceries",
+    "complete": false
+  },
+  {
+    "id": "SY8OUmN0EfFxGI5tslEoB",
+    "value": "Complete Todo App on Frontend Mentor",
+    "complete": false
+  }
+]

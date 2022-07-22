@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --family: "Josefin Sans", sans-serif;
+  --fs-typical: 18px;
+  --fw-normal: 400;
+  --fw-bold: 700;
 }
+
+body {
+  margin: 0;
+  font-family: var(--family);
+  font-weight: var(--fw-normal);
+}
+
+body[data-theme="dark"] {
+  --colors-bg: hsl(235, 21%, 11%);
+  --colors-todo-bg: hsl(235, 24%, 19%);
+
+  --colors-todo-text: hsl(234, 39%, 85%);
+  --colors-todo-text-hover: hsl(236, 33%, 92%);
+  --colors-todo-text-decor: hsl(234, 11%, 52%);
+
+  --colors-todo-controls: hsl(233, 14%, 35%);
+  --colors-todo-border: hsl(237, 14%, 26%);
+  --colors-todo-control-active: hsl(220, 98%, 61%);
+
+  --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+}
+
+body[data-theme="light"] {
+  --colors-bg: hsl(0, 0%, 98%);
+  --colors-todo-bg: hsl(236, 33%, 92%);
+
+  --colors-todo-text: hsl(235, 19%, 35%);
+  --colors-todo-text-hover: hsl(236, 9%, 61%);
+  --colors-todo-text-decor: hsl(233, 11%, 84%);
+
+  --colors-todo-controls: hsl(236, 9%, 61%);
+  --colors-todo-border: hsl(233, 11%, 84%);
+  --colors-todo-control-active: hsl(220, 98%, 61%);
+
+  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* mobile 375 */
+/* desktop 1440 */
