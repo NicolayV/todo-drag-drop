@@ -1,20 +1,14 @@
 import * as reduxHooks from "react-redux";
+import { act, renderHook, screen } from "@testing-library/react";
 
-import { act, renderHook } from "@testing-library/react";
+import { clearComplete } from "../todos/todos-slice";
 
-import * as actions from "./controls-slice";
 import { useControls } from "./use-controls";
 
 jest.mock("react-redux", () => ({
   __esModule: true,
   ...jest.requireActual("react-redux"),
 }));
-// jest.mock("react-redux", () => {
-//   return {
-//     __esModule: true,
-//     ...jest.requireActual("react-redux"),
-//   };
-// });
 
 const testState = [
   {
@@ -38,19 +32,16 @@ describe("useControls", () => {
     mockedDispatch.mockReturnValue(dispatch);
 
     mockedSelector.mockReturnValue(testState);
-    // mockedSelector.mockReturnValue("all");
-    // mockedSelector.mockReturnValue("all");
-    //! const mockedClearComplete = jest.spyOn(actions, "clearComplete");
 
     const { result } = renderHook(useControls);
 
     act(() => {
       result.current.handleClear();
     });
-
-    expect(dispatch).toHaveBeenCalledTimes(1);
-    // expect(mockedClearComplete).toHaveBeenCalledTimes(1);
-
-    // console.log(handleControls, handleClear);
+    act(() => {
+      result.current.handleControls("all");
+    });
+    expect(mockedDispatch).toHaveBeenCalledTimes(1);
+    expect(dispatch).toBeCalledWith(clearComplete());
   });
 });

@@ -19,8 +19,5 @@ root.render(
 );
 
 // test
-// story book
-
 // typeScript
-
 // public on git pages
