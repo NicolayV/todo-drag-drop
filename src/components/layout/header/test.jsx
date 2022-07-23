@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { Header } from "./Header";
+import { Header } from "./index.js";
 
 const cleanUp = jest.fn();
 const toggleTheme = jest.fn();

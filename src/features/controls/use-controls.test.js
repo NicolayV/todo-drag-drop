@@ -1,5 +1,5 @@
 import * as reduxHooks from "react-redux";
-import { act, renderHook, screen } from "@testing-library/react";
+import { act, renderHook } from "@testing-library/react";
 
 import { clearComplete } from "../todos/todos-slice";
 

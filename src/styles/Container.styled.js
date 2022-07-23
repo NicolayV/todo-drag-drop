@@ -1,29 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { useCleanUp } from "../../features/todos/use-cleanup";
-import { useTheme } from "../../features/theme/use-theme";
-
-import { Footer } from "./Footer";
-import { Header } from "./Header";
-
-const Layout = ({ children }) => {
-  const cleanUp = useCleanUp();
-  const toggle = useTheme();
-
-  return (
-    <MainContainer theme={toggle.theme}>
-      <ContentWrapper>
-        <Header cleanUp={cleanUp} {...toggle} />
-        {children}
-        <Footer />
-      </ContentWrapper>
-    </MainContainer>
-  );
-};
-
-export { Layout };
-
-const MainContainer = styled.main`
+export const Container = styled.main`
   min-height: 100vh;
   width: 100vw;
   background-color: var(--colors-bg);
@@ -56,9 +33,4 @@ const MainContainer = styled.main`
       `;
     }
   }}
-`;
-
-const ContentWrapper = styled.div`
-  max-width: 520px;
-  margin: 0 auto;
 `;

@@ -1,27 +1,15 @@
 import styled from "styled-components";
 
-const Checkbox = ({ children, checked, onChange }) => {
-  return (
-    <StyledLabel>
-      <MainCheckbox checked={checked} onChange={onChange} />
-      <StyledCheckbox />
-      {children}
-    </StyledLabel>
-  );
-};
-
-export { Checkbox };
-
-const StyledLabel = styled.label`
+export const StyledLabel = styled.label`
   display: flex;
   line-height: 20px;
 `;
 
-const MainCheckbox = styled.input.attrs({ type: "checkbox" })`
+export const MainCheckbox = styled.input.attrs({ type: "checkbox" })`
   display: none;
 `;
 
-const StyledCheckbox = styled.span`
+export const StyledCheckbox = styled.span`
   display: inline-block;
   width: 20px;
   height: 20px;

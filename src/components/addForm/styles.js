@@ -1,17 +1,6 @@
 import styled from "styled-components";
 
-const TodoHeader = (props) => {
-  return (
-    <StyledLabel>
-      <StyledIcon />
-      <StyledInput {...props} />
-    </StyledLabel>
-  );
-};
-
-export { TodoHeader };
-
-const StyledLabel = styled.label`
+export const StyledLabel = styled.label`
   display: flex;
   align-items: center;
   line-height: 20px;
@@ -23,7 +12,7 @@ const StyledLabel = styled.label`
   box-shadow: var(--shadow);
 `;
 
-const StyledIcon = styled.span`
+export const StyledIcon = styled.span`
   height: 20px;
   width: 20px;
   margin: 0 1rem 0 1rem;
@@ -32,7 +21,7 @@ const StyledIcon = styled.span`
   background-color: var(--colors-todo-bg);
 `;
 
-const StyledInput = styled.input.attrs({
+export const StyledInput = styled.input.attrs({
   type: "text",
   placeholder: "Create a new todo...",
 })`

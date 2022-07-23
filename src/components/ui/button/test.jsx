@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import { DelButton } from "./DelButton";
+import { DelButton } from ".";
 
 describe("DelBtn element", () => {
   test("DelBtn renders", () => {
