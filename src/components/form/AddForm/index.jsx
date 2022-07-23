@@ -1,6 +1,6 @@
-import { useForm } from "../../features/todos/use-form";
+import { useForm } from "../../../features/todo/use-form";
 
-import { StyledIcon, StyledInput, StyledLabel } from "./styles";
+import { StyledIcon, StyledInput, StyledLabel } from "./styled";
 
 const AddForm = () => {
   const addTodo = useForm();

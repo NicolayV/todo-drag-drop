@@ -1,4 +1,4 @@
-import { useControls } from "../../features/controls/use-controls";
+import { useControls } from "../../../features/controls/use-controls";
 
 import {
   StyledClearControl,
@@ -7,7 +7,7 @@ import {
   StyledControlsItem,
   StyledTodoFooter,
   StyledTodoFooterExtra,
-} from "./styles";
+} from "./styled";
 
 const controlOptions = {
   all: { value: "all", label: "All" },

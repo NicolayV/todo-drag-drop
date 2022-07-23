@@ -5,7 +5,7 @@ import storage from "redux-persist/lib/storage";
 
 import { controlsReducer } from "./features/controls/controls-slice";
 import { themeReducer } from "./features/theme/theme-slice";
-import { todosReducer } from "./features/todos/todos-slice";
+import { todosReducer } from "./features/todo/todos-slice";
 
 const persistConfig = {
   key: "root",

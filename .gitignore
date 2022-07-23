@@ -12,6 +12,9 @@
 # production
 /build
 
+# temporary folder for training
+/learnTest
+
 # misc
 .DS_Store
 .env.local

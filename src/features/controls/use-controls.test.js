@@ -1,47 +1,31 @@
-import * as reduxHooks from "react-redux";
+import { Provider } from "react-redux";
 import { act, renderHook } from "@testing-library/react";
 
-import { clearComplete } from "../todos/todos-slice";
+import { store } from "../../store";
 
 import { useControls } from "./use-controls";
 
-jest.mock("react-redux", () => ({
-  __esModule: true,
-  ...jest.requireActual("react-redux"),
-}));
+const HookProvider = ({ store, children }) => {
+  return <Provider store={store}>{children}</Provider>;
+};
 
-const testState = [
-  {
-    id: "g7HFkxC94eH8F",
-    value: "learn JavaScript",
-    complete: true,
-  },
-  {
-    id: "g7HFkxC94eH8F1",
-    value: "learn JavaScript",
-    complete: true,
-  },
-];
+const wrapper = ({ children }) => {
+  return <HookProvider store={store}>{children}</HookProvider>;
+};
 
 describe("useControls", () => {
-  test("dispatch works", () => {
-    const dispatch = jest.fn();
-    const mockedDispatch = jest.spyOn(reduxHooks, "useDispatch");
-    const mockedSelector = jest.spyOn(reduxHooks, "useSelector");
-
-    mockedDispatch.mockReturnValue(dispatch);
-
-    mockedSelector.mockReturnValue(testState);
-
-    const { result } = renderHook(useControls);
+  test("handleControls work correctly", () => {
+    const { result } = renderHook(() => useControls(), { wrapper });
 
     act(() => {
       result.current.handleClear();
     });
+
     act(() => {
-      result.current.handleControls("all");
+      result.current.handleControls("completed");
     });
-    expect(mockedDispatch).toHaveBeenCalledTimes(1);
-    expect(dispatch).toBeCalledWith(clearComplete());
+
+    expect(result.current.controlType).toBe("completed");
+    expect(result.current.qtyTodo).toBe(0);
   });
 });

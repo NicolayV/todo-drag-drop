@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
-import { clearComplete, selectAllTodos } from "../todos/todos-slice";
+import { clearComplete, selectAllTodos } from "../todo/todos-slice";
 
 import { selectControls, setType } from "./controls-slice";
 

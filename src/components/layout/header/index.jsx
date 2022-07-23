@@ -1,7 +1,7 @@
 import { useTheme } from "../../../features/theme/use-theme";
-import { useCleanUp } from "../../../features/todos/use-cleanup";
+import { useCleanUp } from "../../../features/todo/use-cleanup";
 
-import { StyledHeader } from "./styles";
+import { StyledHeader } from "./styled";
 
 const Header = () => {
   const cleanUp = useCleanUp();

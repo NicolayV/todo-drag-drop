@@ -2,11 +2,11 @@ import { useSelector } from "react-redux";
 
 import { selectControls } from "../../../features/controls/controls-slice";
 
-import { Checkbox } from "../../ui/checkbox/index.js.jsx";
+import { Checkbox } from "../../UI/Checkbox/index.js.jsx";
 
-import { DelButton } from "../../ui/button";
+import { DelButton } from "../../UI/Button";
 
-import { StyledItemText, StyledListItem } from "./styles";
+import { StyledItemText, StyledListItem } from "./styled";
 
 const variants = {
   initial: {

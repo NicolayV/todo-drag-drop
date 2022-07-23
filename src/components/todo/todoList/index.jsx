@@ -1,9 +1,9 @@
 import { AnimatePresence, Reorder } from "framer-motion";
 
-import { TodoItem } from "../todoItem";
-import { useTodos } from "../../../features/todos/use-todos";
+import { TodoItem } from "../TodoItem";
+import { useTodos } from "../../../features/todo/use-todos";
 
-import { EmptyList, StyledList, TodoBody } from "./styles";
+import { EmptyList, StyledList, TodoBody } from "./styled";
 
 const TodoList = () => {
   const { todoList, heightTodoItem, handleReorder, ...rest } = useTodos();
